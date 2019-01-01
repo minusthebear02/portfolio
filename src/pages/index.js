@@ -10,25 +10,25 @@ import ContactSection from '../components/contactsection'
 import Sidebar from '../components/sidebar'
 
 export default class IndexPage extends Component {
-  // handleScroll = () => {
-  //   let projectsBottom = this.projects.getBoundingClientRect().bottom - 100
+  handleScroll = () => {
+    let projectsBottom = this.projects.getBoundingClientRect().bottom - 100
 
-  //   this.sidebar.sidebarLinks.forEach(link => {
-  //     if (link.getBoundingClientRect().bottom > projectsBottom) {
-  //       link.style.color = 'white'
-  //     } else {
-  //       link.style.color = '#333'
-  //     }
-  //   })
-  // }
+    this.sidebar.sidebarLinks.forEach(link => {
+      if (link.getBoundingClientRect().bottom > projectsBottom) {
+        link.style.color = 'white'
+      } else {
+        link.style.color = '#333'
+      }
+    })
+  }
 
-  // componentDidMount() {
-  //   window.addEventListener('scroll', this.handleScroll)
-  // }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.handleScroll)
-  // }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
 
   render() {
     return (
