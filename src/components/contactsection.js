@@ -74,7 +74,9 @@ const Social = styled.a`
 
   p {
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
   }
 
   &:hover {
