@@ -26,7 +26,10 @@ export default class Project extends Component {
             })}
           </div>
           <div className="project-description">
-            <p>{description}</p>
+            <div
+              className="project-description-text"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
             <h4>Features</h4>
             <hr />
             <ul>
@@ -127,6 +130,10 @@ const ProjectWrapper = styled.div`
       width: 45%;
       min-width: 300px;
       padding: 0 50px;
+
+      .project-description-text {
+        margin-bottom: 25px;
+      }
 
       h4 {
         margin-bottom: 10px;

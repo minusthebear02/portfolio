@@ -62,7 +62,7 @@ const SidebarWrapper = styled.div`
   top: 0;
   background: transparent;
   height: 100vh;
-  width: 100px;
+  width: 200px;
   padding: 25px 20px 50px;
   z-index: 10;
   display: flex;
@@ -113,7 +113,6 @@ const SidebarWrapper = styled.div`
   .menu-group {
     display: flex;
     flex-direction: column;
-    text-align: center;
 
     a {
       display: flex;
@@ -121,7 +120,7 @@ const SidebarWrapper = styled.div`
       color: #444;
       height: 50px;
       margin-bottom: 15px;
-      justify-content: center;
+      justify-content: flex-start;
       text-decoration: none;
       transition: transform 0.2s ease-out;
 
@@ -148,6 +147,8 @@ const SidebarWrapper = styled.div`
     a {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       color: inherit;
 
       span {
@@ -182,9 +183,10 @@ const SidebarWrapper = styled.div`
 
   .hidden {
     font-family: 'Montserrat';
-    font-size: 12px;
+    font-size: 20px;
     opacity: 0;
     margin-bottom: 0;
+    margin-left: 5px;
     transition: all 0.4s ease-in-out;
   }
 `

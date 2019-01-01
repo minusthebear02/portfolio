@@ -22,7 +22,7 @@ export const projects = [
   {
     name: 'AMAC games',
     description:
-      'Five puzzle type games for our 1.5 million over 55 aged members to play to keep their minds sharp. Built as Custom Post Types in Wordpress for in-house content creators to quickly and easily input each new daily game into the WP backend and have the games created dynamically. Each game with custom PHP templates along with Javascript and jQuery scripts to implement game creation and gameplay.',
+      'Five puzzle type games for our 1.5 million over 55 aged members to play to keep their minds sharp. Built as Custom Post Types in Wordpress for in-house content creators to quickly and easily input each new daily game into the WP backend and have the games created dynamically. Each game with custom PHP templates along with Javascript and jQuery scripts to implement game creation and gameplay.<br /><br /><a href="https://amac.us/games" target="_blank">Check them out here.</a>',
     features: [
       'Quizzes',
       'Puzzle',
