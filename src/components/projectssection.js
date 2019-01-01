@@ -33,7 +33,6 @@ export default class ProjectsSection extends Component {
     return (
       <ProjectsSectionWrapper id="projects">
         <h1>projects...</h1>
-        <Background />
         <StaticQuery
           query={PROJECT_IMAGES}
           render={data =>
@@ -60,28 +59,20 @@ export default class ProjectsSection extends Component {
   }
 }
 
-const Background = styled.div`
-  z-index: 4;
-  background-image: linear-gradient(#fff, #333);
-  top: 100px;
-  bottom: -150px;
-  left: 0;
-  right: 0;
-  position: absolute;
-`
-
 const ProjectsSectionWrapper = styled.div`
   position: relative;
-  background-color: white;
+  background-image: linear-gradient(rgb(115, 180, 237), #333);
   z-index: 5;
+  box-shadow: 0 0 50px #333 inset;
 
   h1 {
     position: relative;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 75px;
-    color: #777;
+    color: white;
     margin: 0 auto 150px;
     z-index: 4;
+    padding-top: 100px;
   }
 `

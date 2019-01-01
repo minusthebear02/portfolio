@@ -11,7 +11,7 @@ export default class ResumeSection extends Component {
           <h1 id="resume" className="section-title">
             resume...
           </h1>
-          <a href={resumeImg} style={{ width: '70%' }}>
+          <a href={resumeImg}>
             <img src={resumeImg} alt="Mark Froehlich's super awesome resume" />
           </a>
         </ResumeWrapper>
@@ -24,7 +24,7 @@ const ResumeWrapper = styled.div`
   position: relative;
   color: white;
   z-index: 3;
-  padding: 150px 100px;
+  padding: 150px 50px;
   background: #333;
   display: flex;
   flex-direction: column;
@@ -37,5 +37,10 @@ const ResumeWrapper = styled.div`
     font-size: 75px;
     color: white;
     margin-bottom: 100px;
+  }
+
+  a {
+    width: 90%;
+    max-width: 875px;
   }
 `

@@ -151,7 +151,7 @@ const SidebarWrapper = styled.div`
       color: inherit;
 
       span {
-        transition: transform 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
       }
 
       &:hover {

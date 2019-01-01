@@ -13,7 +13,10 @@ export default class ContactSection extends Component {
             <span className="material-icons">email</span>
             <p>mfroeh2[at]gmail[dot]com</p>
           </Social>
-          <Social href="https://www.linkedin.com/in/mark-froehlich/">
+          <Social
+            href="https://www.linkedin.com/in/mark-froehlich/"
+            target="_blank"
+          >
             <img src={linkedIn} />
             <p>/in/mark-froehlich</p>
           </Social>
@@ -43,6 +46,7 @@ const ContactSectionWrapper = styled.div`
   .socials {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     width: 70%;
     margin: auto;
   }

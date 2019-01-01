@@ -61,7 +61,7 @@ const ProjectWrapper = styled.div`
 
 }
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: white;
     -ms-transform: skewY(-10deg);
     -webkit-transform: skewY(-10deg);
