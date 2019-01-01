@@ -60,7 +60,8 @@ const ProjectWrapper = styled.div`
   -webkit-transform: skewY(10deg);
   transform: skewY(10deg);
   color: #444;
-  box-shadow: 2px 2px 20px -5px black;
+  box-shadow: inset 0px 9px 50px -15px #333;
+
 
 }
 
@@ -133,6 +134,10 @@ const ProjectWrapper = styled.div`
 
       .project-description-text {
         margin-bottom: 25px;
+
+        a {
+          color: #333;
+        }
       }
 
       h4 {

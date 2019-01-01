@@ -36,7 +36,11 @@ export default class Sidebar extends Component {
         </div>
         <h3 className="name">Mark Froehlich</h3>
         <div className="menu-group sections-nav">
-          <a href="#stack" ref={l => (this.sidebarLinks[1] = l)}>
+          <a
+            href="#stack"
+            ref={l => (this.sidebarLinks[1] = l)}
+            onClick={this.slowScroll}
+          >
             <span className="material-icons">code</span>
             <p className="hidden">Stack</p>
           </a>
@@ -117,7 +121,7 @@ const SidebarWrapper = styled.div`
     a {
       display: flex;
       flex-wrap: wrap;
-      color: #444;
+      color: #333;
       height: 50px;
       margin-bottom: 15px;
       justify-content: flex-start;
@@ -143,6 +147,7 @@ const SidebarWrapper = styled.div`
 
   .burger {
     align-self: flex-start;
+    color: #333;
 
     a {
       display: flex;

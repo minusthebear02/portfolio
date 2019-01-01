@@ -11,7 +11,7 @@ export default class ContactSection extends Component {
         <div className="socials">
           <Social href="mailto:mfroeh2@gmail.com">
             <span className="material-icons">email</span>
-            <p>mfroeh2[at]gmail[dot]com</p>
+            <p>mfroeh2@gmail.com</p>
           </Social>
           <Social
             href="https://www.linkedin.com/in/mark-froehlich/"

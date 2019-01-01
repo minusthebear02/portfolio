@@ -63,7 +63,7 @@ const ProjectsSectionWrapper = styled.div`
   position: relative;
   background-image: linear-gradient(rgb(115, 180, 237), #333);
   z-index: 5;
-  box-shadow: 0 0 50px #333 inset;
+  box-shadow: inset 0px 9px 50px -15px #333;
 
   h1 {
     position: relative;
