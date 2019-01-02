@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import linkedIn from '../images/linkedin-logo.svg'
+import { SectionTitle } from './globalStyle'
 
 export default class ContactSection extends Component {
   render() {
     return (
       <ContactSectionWrapper>
-        <h1>let's collaborate...</h1>
+        <SectionTitle>let's collaborate</SectionTitle>
         <div className="socials">
           <Social href="mailto:mfroeh2@gmail.com">
             <span className="material-icons">email</span>
@@ -32,16 +33,6 @@ const ContactSectionWrapper = styled.div`
   z-index: 5;
   text-align: center;
   padding-bottom: 200px;
-
-  h1 {
-    position: relative;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 75px;
-    color: white;
-    margin: 0 auto 50px;
-    z-index: 4;
-  }
 
   .socials {
     display: flex;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Spring } from 'react-spring'
 
 import hero from '../images/portfolio-hero-min.gif'
 import { FixedHeroImage } from './globalStyle'
@@ -7,18 +8,28 @@ import { FixedHeroImage } from './globalStyle'
 const IntroSection = () => (
   <div>
     <HeroImage />
-    <InfoSection>
-      <div className="name">
-        <h2>
-          Mark
-          <br />
-          Froehlich
-        </h2>
-        <div className="title">
-          <h4>Web Developer</h4>
+    <Spring
+      from={{ background: 'linear-gradient(20deg, coral 100%, white 0%)' }}
+      to={{ background: 'linear-gradient(90deg, coral 50%, white 50%)' }}
+      delay="500"
+    >
+      {styles => (
+        <div style={styles}>
+          <InfoSection>
+            <div className="name">
+              <h2>
+                Mark
+                <br />
+                Froehlich
+              </h2>
+              <div className="title">
+                <h4>Web Developer</h4>
+              </div>
+            </div>
+          </InfoSection>
         </div>
-      </div>
-    </InfoSection>
+      )}
+    </Spring>
   </div>
 )
 
@@ -31,8 +42,6 @@ const HeroImage = styled(FixedHeroImage)`
 `
 
 const InfoSection = styled.div`
-  background: coral;
-  background: linear-gradient(90deg, coral 50%, white 50%);
   padding-bottom: 50vh;
 
   .name {

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import Project from './project'
 import { projects } from '../utilities/constants'
+import { SectionTitle } from './globalStyle'
 
 const PROJECT_IMAGES = graphql`
   query imagesQuery {
@@ -32,7 +33,7 @@ export default class ProjectsSection extends Component {
   render() {
     return (
       <ProjectsSectionWrapper id="projects">
-        <h1>projects...</h1>
+        <SectionTitle>projects</SectionTitle>
         <StaticQuery
           query={PROJECT_IMAGES}
           render={data =>
@@ -64,15 +65,4 @@ const ProjectsSectionWrapper = styled.div`
   background-image: linear-gradient(rgb(115, 180, 237), #333);
   z-index: 5;
   box-shadow: inset 0px 9px 50px -15px #333;
-
-  h1 {
-    position: relative;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 75px;
-    color: white;
-    margin: 0 auto 150px;
-    z-index: 4;
-    padding-top: 100px;
-  }
 `

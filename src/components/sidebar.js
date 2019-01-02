@@ -36,11 +36,7 @@ export default class Sidebar extends Component {
         </div>
         <h3 className="name">Mark Froehlich</h3>
         <div className="menu-group sections-nav">
-          <a
-            href="#stack"
-            ref={l => (this.sidebarLinks[1] = l)}
-            onClick={this.slowScroll}
-          >
+          <a href="#stack" ref={l => (this.sidebarLinks[1] = l)}>
             <span className="material-icons">code</span>
             <p className="hidden">Stack</p>
           </a>
@@ -80,7 +76,7 @@ const SidebarWrapper = styled.div`
     color: white;
     position: absolute;
     right: 25px;
-    top: 40px;
+    top: 23px;
     font-family: 'Raleway';
     font-weight: 100;
     white-space: nowrap;
@@ -101,14 +97,18 @@ const SidebarWrapper = styled.div`
       color: white;
     }
 
-    .sections-nav a {
-      justify-content: flex-start;
-      color: white;
+    .menu-group.sections-nav {
+      display: flex;
+      a {
+        justify-content: flex-start;
+        color: white;
+        font-size: 26px;
 
-      .hidden {
-        opacity: 1;
-        margin: 3px 0 0 10px;
-        font-size: 20px;
+        .hidden {
+          opacity: 1;
+          font-size: inherit;
+          margin-left: 20px;
+        }
       }
     }
   }
@@ -118,6 +118,12 @@ const SidebarWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
+    &.sections-nav {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
     a {
       display: flex;
       flex-wrap: wrap;
@@ -125,6 +131,7 @@ const SidebarWrapper = styled.div`
       height: 50px;
       margin-bottom: 15px;
       justify-content: flex-start;
+      align-items: center;
       text-decoration: none;
       transition: transform 0.2s ease-out;
 
@@ -133,6 +140,7 @@ const SidebarWrapper = styled.div`
 
         .hidden {
           opacity: 0.8;
+          margin-left: 10px;
         }
       }
     }
@@ -183,6 +191,10 @@ const SidebarWrapper = styled.div`
           margin: -18px auto -12px;
         }
       }
+    }
+
+    @media screen and (min-width: 767px) {
+      display: none;
     }
   }
 

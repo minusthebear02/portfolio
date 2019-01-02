@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import resumeImg from '../images/resume/Mark-Froehlich-Resume---Dec-2018.jpg'
+import { SectionTitle } from './globalStyle'
 
 export default class ResumeSection extends Component {
   render() {
     return (
       <>
         <ResumeWrapper>
-          <h1 id="resume" className="section-title">
-            resume...
-          </h1>
+          <SectionTitle id="resume">resume</SectionTitle>
           <a href={resumeImg}>
             <img src={resumeImg} alt="Mark Froehlich's super awesome resume" />
           </a>
@@ -24,21 +23,12 @@ const ResumeWrapper = styled.div`
   position: relative;
   color: white;
   z-index: 3;
-  padding: 150px 50px;
+  padding: 75px 0px;
   background: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: -2px;
-
-  h1 {
-    position: relative;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 75px;
-    color: white;
-    margin-bottom: 100px;
-  }
 
   a {
     width: 90%;

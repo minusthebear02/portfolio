@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { skills } from '../utilities/constants'
+import { SectionTitle } from './globalStyle'
 
 const SkillsSection = () => (
   <SkillsWrapper>
-    <TransitionGradient />
-    <h1 id="stack" className="section-title">
-      tech...
-    </h1>
+    <SectionTitle id="stack" style={{ color: '#777' }}>
+      tech
+    </SectionTitle>
     <Skills>
       {skills.map(skill => (
         <div className="skill" key={skill.name}>
@@ -27,17 +27,9 @@ export default SkillsSection
 const SkillsWrapper = styled.div`
   position: relative;
   z-index: 4;
-  margin-top: -150vh;
-
-  .section-title {
-    background-color: #fff;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 75px;
-    color: #777;
-    margin: 0 auto;
-    padding: 100px 0 50px;
-  }
+  margin-top: -100vh;
+  box-shadow: 0 -60px 150px 100px white;
+  background-color: white;
 `
 
 const Skills = styled.div`
@@ -54,7 +46,7 @@ const Skills = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 27%;
-    min-width: 200px;
+    min-width: 125px;
     margin: 0 3%;
 
     .image-wrapper {
@@ -92,12 +84,6 @@ const Skills = styled.div`
   }
 
   @media screen and (max-width: 950px) {
-    padding: 0 30px 300px;
+    padding: 0 30px 100px;
   }
-`
-
-const TransitionGradient = styled.div`
-  height: 400px;
-  width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #fff);
 `
