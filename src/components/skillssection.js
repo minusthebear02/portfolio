@@ -13,11 +13,7 @@ export default class SkillsSection extends Component {
         </SectionTitle>
         <Skills>
           {skills.map(skill => (
-            <div
-              className="skill"
-              key={skill.name}
-              ref={this.singleRefs[skill.name]}
-            >
+            <div className="skill" key={skill.name}>
               <div className="image-wrapper">
                 <img src={skill.logo} alt={skill.alt} />
               </div>
