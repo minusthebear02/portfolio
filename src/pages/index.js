@@ -11,7 +11,10 @@ import Sidebar from '../components/sidebar'
 
 export default class IndexPage extends Component {
   handleScroll = () => {
-    let projectsBottom = this.projects.getBoundingClientRect().bottom - 100
+    let windowWidth = window.innerWidth
+    let projectsBottom =
+      this.resume.getBoundingClientRect().top -
+      (windowWidth * Math.tan(-9 * (Math.PI / 180)) + 75)
 
     this.sidebar.sidebarLinks.forEach(link => {
       if (link.getBoundingClientRect().bottom > projectsBottom) {
@@ -37,10 +40,10 @@ export default class IndexPage extends Component {
         <NameSection />
         <Sidebar ref={s => (this.sidebar = s)} />
         <SkillsSection />
-        <div ref={p => (this.projects = p)}>
-          <ProjectsSection />
+        <ProjectsSection />
+        <div ref={r => (this.resume = r)}>
+          <ResumeSection />
         </div>
-        <ResumeSection />
         <ContactSection />
       </Layout>
     )

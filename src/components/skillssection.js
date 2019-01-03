@@ -1,28 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import { skills } from '../utilities/constants'
 import { SectionTitle } from './globalStyle'
 
-const SkillsSection = () => (
-  <SkillsWrapper>
-    <SectionTitle id="stack" style={{ color: '#777' }}>
-      tech
-    </SectionTitle>
-    <Skills>
-      {skills.map(skill => (
-        <div className="skill" key={skill.name}>
-          <div className="image-wrapper">
-            <img src={skill.logo} alt={skill.alt} />
-          </div>
-          <li>{skill.name}</li>
-        </div>
-      ))}
-    </Skills>
-  </SkillsWrapper>
-)
-
-export default SkillsSection
+export default class SkillsSection extends Component {
+  render() {
+    return (
+      <SkillsWrapper>
+        <SectionTitle id="stack" style={{ color: '#777' }}>
+          tech
+        </SectionTitle>
+        <Skills>
+          {skills.map(skill => (
+            <div
+              className="skill"
+              key={skill.name}
+              ref={this.singleRefs[skill.name]}
+            >
+              <div className="image-wrapper">
+                <img src={skill.logo} alt={skill.alt} />
+              </div>
+              <li>{skill.name}</li>
+            </div>
+          ))}
+        </Skills>
+      </SkillsWrapper>
+    )
+  }
+}
 
 const SkillsWrapper = styled.div`
   position: relative;

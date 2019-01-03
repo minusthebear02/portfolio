@@ -48,7 +48,7 @@ export const projects = [
 
 export const skills = [
   {
-    name: 'JaveScript | jQuery',
+    name: 'JavaScript | jQuery',
     logo: jsLogo,
     alt: 'JavaScript Logo',
   },

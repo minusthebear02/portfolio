@@ -140,7 +140,6 @@ const SidebarWrapper = styled.div`
 
         .hidden {
           opacity: 0.8;
-          margin-left: 10px;
         }
       }
     }
