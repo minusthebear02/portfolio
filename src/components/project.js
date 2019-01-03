@@ -104,9 +104,11 @@ const ProjectWrapper = styled.div`
     -ms-transform: skewY(-10deg); /* IE 9 */
     -webkit-transform: skewY(-10deg); /* Safari */
     transform: skewY(-10deg);
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
+    max-width: 1300px;
+    margin: auto;
 
     .project-image {
       width: 45%;
@@ -121,7 +123,6 @@ const ProjectWrapper = styled.div`
         height: auto !important;
         right: 0;
         margin: auto;
-        -webkit-filer: drop-shadow(10px 10px 5px #bbb);
         filter: drop-shadow(0 5px 10px #333);
       }
     }
@@ -130,7 +131,6 @@ const ProjectWrapper = styled.div`
       font-family: 'Montserrat';
       width: 45%;
       min-width: 300px;
-      padding: 0 50px;
 
       .project-description-text {
         margin-bottom: 25px;
