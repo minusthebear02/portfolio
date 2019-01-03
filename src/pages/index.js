@@ -12,9 +12,7 @@ import Sidebar from '../components/sidebar'
 export default class IndexPage extends Component {
   handleScroll = () => {
     let windowWidth = window.innerWidth
-    let projectsBottom =
-      this.resume.getBoundingClientRect().top -
-      (windowWidth * Math.tan(-9 * (Math.PI / 180)) + 75)
+    let projectsBottom = this.resume.getBoundingClientRect().top - 130
 
     this.sidebar.sidebarLinks.forEach(link => {
       if (link.getBoundingClientRect().bottom > projectsBottom) {
@@ -36,7 +34,10 @@ export default class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <SEO keywords={['gatsby', 'application', 'react']} />
+        <SEO
+          keywords={['gatsby', 'application', 'react']}
+          title="Mark Froehlich"
+        />
         <NameSection />
         <Sidebar ref={s => (this.sidebar = s)} />
         <SkillsSection />

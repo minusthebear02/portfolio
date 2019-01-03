@@ -49,31 +49,37 @@ export const projects = [
 export const skills = [
   {
     name: 'JavaScript | jQuery',
+    id: 0,
     logo: jsLogo,
     alt: 'JavaScript Logo',
   },
   {
     name: 'React | React Native',
+    id: 1,
     logo: reactLogo,
     alt: 'React Logo',
   },
   {
     name: 'GraphQL',
+    id: 2,
     logo: graphqlLogo,
     alt: 'GraphQL Logo',
   },
   {
     name: 'Wordpress | PHP',
+    id: 3,
     logo: wpLogo,
     alt: 'Wordpress Logo',
   },
   {
     name: 'Ruby on Rails',
+    id: 4,
     logo: railsLogo,
     alt: 'Ruby on Rails Logo',
   },
   {
     name: 'Sass | Styled Components',
+    id: 5,
     logo: sassLogo,
     alt: 'Sass Logo',
   },

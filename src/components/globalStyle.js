@@ -17,7 +17,7 @@ export const SectionTitle = styled.h1`
   font-family: 'Raleway', sans-serif;
   font-size: calc(4.5vw + 4.5vh + 0.5vmin);
   color: white;
-  margin: 0 auto 150px;
+  margin: 0 auto 100px;
   z-index: 4;
   padding-top: 100px;
 `

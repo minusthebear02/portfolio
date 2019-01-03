@@ -33,7 +33,7 @@ export default class ProjectsSection extends Component {
   render() {
     return (
       <ProjectsSectionWrapper id="projects">
-        <SectionTitle>projects</SectionTitle>
+        <SectionTitle style={{ marginBottom: 150 }}>projects</SectionTitle>
         <StaticQuery
           query={PROJECT_IMAGES}
           render={data =>
