@@ -26,15 +26,15 @@ export default class Skill extends Component {
     const { name, logo, alt } = this.props
     const { visible } = this.state
     return (
-      <SkillWrapper
-        className="skill"
-        ref={s => {
-          this.skill = s
-        }}
-        visible={visible}
-      >
+      <SkillWrapper className="skill" visible={visible}>
         <div className="image-wrapper">
-          <img src={logo} alt={alt} />
+          <img
+            src={logo}
+            alt={alt}
+            ref={s => {
+              this.skill = s
+            }}
+          />
         </div>
         <li>{name}</li>
       </SkillWrapper>
