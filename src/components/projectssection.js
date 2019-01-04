@@ -25,11 +25,6 @@ const PROJECT_IMAGES = graphql`
 `
 
 export default class ProjectsSection extends Component {
-  constructor(props) {
-    super(props)
-
-    this.projectNodes = []
-  }
   render() {
     return (
       <ProjectsSectionWrapper id="projects">
@@ -37,7 +32,7 @@ export default class ProjectsSection extends Component {
         <StaticQuery
           query={PROJECT_IMAGES}
           render={data =>
-            projects.map((project, i) => {
+            projects.map(project => {
               const images = data.Images.edges.filter(({ node }) => {
                 return node.relativePath.includes(project.name)
               })

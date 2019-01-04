@@ -1,43 +1,89 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import { Spring } from 'react-spring'
 
-import hero from '../images/portfolio-hero-min.gif'
-import { FixedHeroImage } from './globalStyle'
+const HERO_IMAGE = graphql`
+  {
+    file(relativePath: { regex: "/portfolio-hero/" }) {
+      childImageSharp {
+        fluid(maxWidth: 2500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
-const IntroSection = () => (
-  <div>
-    <HeroImage />
-    <Spring
-      from={{ background: 'linear-gradient(20deg, coral 100%, white 0%)' }}
-      to={{ background: 'linear-gradient(90deg, coral 50%, white 50%)' }}
-      delay="500"
-    >
-      {styles => (
-        <div style={styles}>
-          <InfoSection>
-            <div className="name">
-              <h2>
-                Mark
-                <br />
-                Froehlich
-              </h2>
-              <div className="title">
-                <h4>Web Developer</h4>
-              </div>
-            </div>
-          </InfoSection>
-        </div>
-      )}
-    </Spring>
-  </div>
-)
+export default class IntroSection extends Component {
+  state = {
+    loaded: false,
+  }
 
-const HeroImage = styled(FixedHeroImage)`
-  background: url(${hero}) no-repeat center/cover;
+  render() {
+    const { loaded } = this.state
+    return (
+      <div>
+        <StaticQuery
+          query={HERO_IMAGE}
+          render={data => (
+            <>
+              <HeroImageWrapper className="hero-wrapper">
+                <Img
+                  fluid={data.file.childImageSharp.fluid}
+                  onLoad={() => this.setState({ loaded: true })}
+                  className="hero-image"
+                />
+              </HeroImageWrapper>
+              <Spring
+                from={{
+                  background: 'linear-gradient(20deg, coral 100%, white 0%)',
+                }}
+                to={{
+                  background: loaded
+                    ? 'linear-gradient(90deg, coral 50%, white 50%)'
+                    : 'linear-gradient(20deg, coral 100%, white 0%)',
+                }}
+                delay="500"
+              >
+                {styles => (
+                  <div style={styles}>
+                    <InfoSection>
+                      <div className="name">
+                        <h2>
+                          Mark
+                          <br />
+                          Froehlich
+                        </h2>
+                        <div className="title">
+                          <h4>Web Developer</h4>
+                        </div>
+                      </div>
+                    </InfoSection>
+                  </div>
+                )}
+              </Spring>
+            </>
+          )}
+        />
+      </div>
+    )
+  }
+}
 
-  @media screen and (max-width: 750px) {
-    display: none;
+const HeroImageWrapper = styled.div`
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  top: 0;
+  overflow: hidden;
+
+  .hero-image {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
   }
 `
 
@@ -74,8 +120,10 @@ const InfoSection = styled.div`
   @media screen and (max-width: 750px) {
     .name {
       height: 100vh;
+
+      h2 {
+        margin-top: -50px;
+      }
     }
   }
 `
-
-export default IntroSection
