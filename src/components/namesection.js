@@ -85,6 +85,12 @@ const HeroImageWrapper = styled.div`
     height: 100vh;
     width: 100vw;
   }
+
+  /* @media screen and (max-width: 750px) {
+    .hero-image {
+      display: none;
+    }
+  } */
 `
 
 const InfoSection = styled.div`

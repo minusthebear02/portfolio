@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import Tilt from 'react-vanilla-tilt'
 
 export default class Project extends Component {
   render() {
@@ -16,11 +17,13 @@ export default class Project extends Component {
               const mainImageName = image.node.name
               return (
                 <div className={`${name}-image`} key={mainImageName}>
-                  <Img
-                    title={mainImageName}
-                    alt={mainImageName}
-                    sizes={mainImageSize}
-                  />
+                  <Tilt options={{ glare: true }}>
+                    <Img
+                      title={mainImageName}
+                      alt={mainImageName}
+                      sizes={mainImageSize}
+                    />
+                  </Tilt>
                 </div>
               )
             })}
@@ -113,6 +116,12 @@ const ProjectWrapper = styled.div`
     .project-image {
       width: 45%;
       min-width: 300px;
+
+      > div > div {
+        width: 100% !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
 
       .gatsby-image-wrapper {
         overflow: visible !important;
