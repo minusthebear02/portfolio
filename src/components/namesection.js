@@ -9,7 +9,7 @@ const HERO_IMAGE = graphql`
     file(relativePath: { regex: "/portfolio-hero/" }) {
       childImageSharp {
         fluid(maxWidth: 2500) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }
