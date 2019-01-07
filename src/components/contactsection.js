@@ -32,7 +32,7 @@ const ContactSectionWrapper = styled.div`
   background-color: #333;
   z-index: 5;
   text-align: center;
-  padding-bottom: 200px;
+  padding: 0 25px 100px;
 
   .socials {
     display: flex;

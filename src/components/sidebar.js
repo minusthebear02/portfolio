@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 export default class Sidebar extends Component {
@@ -57,8 +56,6 @@ export default class Sidebar extends Component {
 
 const SidebarWrapper = styled.div`
   position: sticky;
-  position: -webkit-sticky;
-  left: 0;
   top: 0;
   background: transparent;
   height: 100vh;
@@ -73,6 +70,7 @@ const SidebarWrapper = styled.div`
 
   .name {
     display: none;
+    font-size: 24px;
     color: white;
     position: absolute;
     right: 25px;
@@ -89,7 +87,6 @@ const SidebarWrapper = styled.div`
 
     .name {
       display: block;
-      font-size: 24px;
     }
 
     .material-icons,
@@ -100,7 +97,6 @@ const SidebarWrapper = styled.div`
     .menu-group.sections-nav {
       display: flex;
       a {
-        justify-content: flex-start;
         color: white;
         font-size: 26px;
 
@@ -126,18 +122,13 @@ const SidebarWrapper = styled.div`
 
     a {
       display: flex;
-      flex-wrap: wrap;
       color: #333;
       height: 50px;
       margin-bottom: 15px;
-      justify-content: flex-start;
-      align-items: center;
       text-decoration: none;
       transition: transform 0.2s ease-out;
 
       &:hover {
-        transform: scale(1.3);
-
         .hidden {
           opacity: 0.8;
         }
@@ -206,11 +197,3 @@ const SidebarWrapper = styled.div`
     transition: all 0.4s ease-in-out;
   }
 `
-
-Sidebar.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Sidebar.defaultProps = {
-  siteTitle: '',
-}

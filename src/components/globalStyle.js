@@ -1,16 +1,5 @@
 import styled from 'styled-components'
 
-export const FixedHeroImage = styled.div`
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  z-index: 3;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-`
-
 export const SectionTitle = styled.h1`
   position: relative;
   text-align: center;
@@ -20,4 +9,8 @@ export const SectionTitle = styled.h1`
   margin: 0 auto 100px;
   z-index: 4;
   padding-top: 100px;
+
+  @media screen and (max-width: 750px) {
+    margin: 0 auto 50px;
+  }
 `

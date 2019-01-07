@@ -95,7 +95,7 @@ const ProjectWrapper = styled.div`
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: calc(4vw + 4vh + 0.5vmin);
+    font-size: calc(3.5vw + 3.5vh + 0.5vmin);
     -ms-transform: skewY(-10deg); /* IE 9 */
     -webkit-transform: skewY(-10deg); /* Safari */
     transform: skewY(-10deg);
@@ -117,10 +117,12 @@ const ProjectWrapper = styled.div`
       width: 45%;
       min-width: 300px;
 
+      /* Tilt styles */
       > div > div {
         width: 100% !important;
         background: transparent !important;
         box-shadow: none !important;
+        margin: 0 !important;
       }
 
       .gatsby-image-wrapper {
@@ -168,9 +170,16 @@ const ProjectWrapper = styled.div`
   }
 
   @media screen and (max-width: 767px) {
+    padding: 100px 0;
+
+    .project-name {
+      margin-bottom: 25px;
+    }
+
     .project-description {
       width: 90% !important;
       order: 2 !important;
+      padding: 0 40px;
     }
 
     .project-image {

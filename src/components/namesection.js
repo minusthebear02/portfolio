@@ -8,7 +8,7 @@ const HERO_IMAGE = graphql`
   {
     file(relativePath: { regex: "/portfolio-hero/" }) {
       childImageSharp {
-        fluid(maxWidth: 2500) {
+        fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -86,11 +86,9 @@ const HeroImageWrapper = styled.div`
     width: 100vw;
   }
 
-  /* @media screen and (max-width: 750px) {
-    .hero-image {
-      display: none;
-    }
-  } */
+  @media screen and (max-width: 750px) {
+    height: 110vh;
+  }
 `
 
 const InfoSection = styled.div`
@@ -129,6 +127,11 @@ const InfoSection = styled.div`
 
       h2 {
         margin-top: -50px;
+        font-size: 56px;
+      }
+
+      h4 {
+        font-size: 30px;
       }
     }
   }
