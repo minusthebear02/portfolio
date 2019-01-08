@@ -95,7 +95,7 @@ const ProjectWrapper = styled.div`
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: calc(3.5vw + 3.5vh + 0.5vmin);
+    font-size: calc(3.2vw + 3.2vh + 0.5vmin);
     -ms-transform: skewY(-10deg); /* IE 9 */
     -webkit-transform: skewY(-10deg); /* Safari */
     transform: skewY(-10deg);

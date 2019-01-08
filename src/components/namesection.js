@@ -86,8 +86,16 @@ const HeroImageWrapper = styled.div`
     width: 100vw;
   }
 
-  @media screen and (max-width: 750px) {
-    height: 110vh;
+  @media screen and (max-height: 740px) {
+    .hero-image {
+      height: 740px;
+    }
+  }
+
+  @media screen and (max-height: 820px) {
+    .hero-image {
+      height: 840px;
+    }
   }
 `
 
@@ -123,8 +131,6 @@ const InfoSection = styled.div`
 
   @media screen and (max-width: 750px) {
     .name {
-      height: 100vh;
-
       h2 {
         margin-top: -50px;
         font-size: 56px;
@@ -133,6 +139,18 @@ const InfoSection = styled.div`
       h4 {
         font-size: 30px;
       }
+    }
+  }
+
+  @media screen and (max-height: 740px) {
+    .name {
+      height: 740px;
+    }
+  }
+
+  @media screen and (max-height: 820px) {
+    .name {
+      height: 820px;
     }
   }
 `
