@@ -130,7 +130,7 @@ const ProjectWrapper = styled.div`
       }
 
       img {
-        width: 70% !important;
+        width: 80% !important;
         height: auto !important;
         right: 0;
         margin: auto;
@@ -185,6 +185,10 @@ const ProjectWrapper = styled.div`
     .project-image {
       width: 90% !important;
       order: 1 !important;
+
+      img {
+        width: 90% !important;
+      }
     }
   }
 `

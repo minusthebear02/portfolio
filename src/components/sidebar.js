@@ -122,6 +122,7 @@ const SidebarWrapper = styled.div`
 
     a {
       display: flex;
+      align-items: center;
       color: #333;
       height: 50px;
       margin-bottom: 15px;
