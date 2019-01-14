@@ -92,14 +92,12 @@ const HeroImageWrapper = styled.div`
 `
 
 const InfoSection = styled.div`
-  padding-bottom: 50vh;
-
   .name {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 100px);
+    height: 100vh;
   }
 
   h2 {
@@ -107,7 +105,7 @@ const InfoSection = styled.div`
     font-weight: 100;
     font-size: 70px;
     text-align: left;
-    margin: 0 auto;
+    margin: -100px auto 0;
     line-height: 0.95;
     color: #333;
     border-bottom: 1px solid #333;

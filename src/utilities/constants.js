@@ -66,10 +66,10 @@ export const skills = [
     alt: 'GraphQL Logo',
   },
   {
-    name: 'Wordpress | PHP',
+    name: 'WordPress | PHP',
     id: 3,
     logo: wpLogo,
-    alt: 'Wordpress Logo',
+    alt: 'WordPress Logo',
   },
   {
     name: 'Ruby on Rails',

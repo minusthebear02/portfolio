@@ -30,9 +30,8 @@ export default class SkillsSection extends Component {
 const SkillsWrapper = styled.div`
   position: relative;
   z-index: 4;
-  margin-top: -100vh;
-  box-shadow: 0 -60px 150px 100px white;
   background-color: white;
+  box-shadow: inset 0px 9px 50px -15px #333;
 `
 
 const Skills = styled.div`

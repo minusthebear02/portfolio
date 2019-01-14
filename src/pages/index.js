@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+import MeSection from '../components/mesection'
 import NameSection from '../components/namesection'
 import SkillsSection from '../components/skillssection'
 import ProjectsSection from '../components/projectssection'
@@ -36,6 +37,7 @@ export default class IndexPage extends Component {
         <SEO keywords={['gatsby', 'application', 'react']} title="" />
         <NameSection />
         <Sidebar ref={s => (this.sidebar = s)} />
+        <MeSection />
         <SkillsSection />
         <ProjectsSection />
         <div ref={r => (this.resume = r)}>
