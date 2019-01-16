@@ -59,5 +59,5 @@ const ProjectsSectionWrapper = styled.div`
   position: relative;
   background-image: linear-gradient(rgb(115, 180, 237), #333);
   z-index: 5;
-  box-shadow: inset 0px 9px 50px -15px #333;
+  box-shadow: inset 0 22px 22px -15px rgba(0, 0, 0, 0.3);
 `

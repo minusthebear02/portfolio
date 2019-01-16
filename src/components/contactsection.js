@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import linkedIn from '../images/linkedin-logo.svg'
 import { SectionTitle } from './globalStyle'
+import FloatingIcon from './floatingicon'
 
 export default class ContactSection extends Component {
   render() {
@@ -28,11 +29,12 @@ export default class ContactSection extends Component {
 }
 
 const ContactSectionWrapper = styled.div`
+  background-color: rgb(115, 180, 237);
   position: relative;
-  background-color: #333;
   z-index: 5;
   text-align: center;
   padding: 0 25px 100px;
+  box-shadow: inset 0 22px 22px -15px rgba(0, 0, 0, 0.3);
 
   .socials {
     display: flex;
@@ -48,17 +50,18 @@ const Social = styled.a`
   flex-direction: column;
   position: inline-block;
   text-decoration: none;
+  min-width: 200px;
 
   .material-icons {
     font-size: 200px;
-    color: #333;
-    filter: drop-shadow(10px 10px 5px #222);
+    color: rgb(115, 180, 237);
+    filter: drop-shadow(10px 10px 5px #7f7f7f);
     transition: all 0.2s ease-out;
   }
 
   img {
     width: 177px;
-    filter: drop-shadow(10px 10px 5px #222);
+    filter: drop-shadow(10px 10px 5px #7f7f7f);
     margin: 0 auto 25px;
     transition: all 0.2s ease-out;
   }
@@ -74,7 +77,7 @@ const Social = styled.a`
     img,
     .material-icons {
       transform: translateY(-8px);
-      filter: drop-shadow(15px 20px 5px #222);
+      filter: drop-shadow(15px 20px 5px #7f7f7f);
     }
   }
 `

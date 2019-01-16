@@ -23,10 +23,10 @@ export default class Skill extends Component {
   }
 
   render() {
-    const { name, logo, alt } = this.props
+    const { name, logo, alt, href } = this.props
     const { visible } = this.state
     return (
-      <SkillWrapper className="skill" visible={visible}>
+      <FloatingIconWrapper className="skill" visible={visible} href={href}>
         <div className="image-wrapper">
           <img
             src={logo}
@@ -37,12 +37,12 @@ export default class Skill extends Component {
           />
         </div>
         <li>{name}</li>
-      </SkillWrapper>
+      </FloatingIconWrapper>
     )
   }
 }
 
-const SkillWrapper = styled.div`
+const FloatingIconWrapper = styled.a`
   color: #555;
   display: flex;
   flex-direction: column;

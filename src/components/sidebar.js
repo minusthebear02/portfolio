@@ -35,15 +35,19 @@ export default class Sidebar extends Component {
         </div>
         <h3 className="name">Mark Froehlich</h3>
         <div className="menu-group sections-nav">
-          <a href="#stack" ref={l => (this.sidebarLinks[1] = l)}>
+          <a href="#me" ref={l => (this.sidebarLinks[1] = l)}>
+            <span className="material-icons">face</span>
+            <p className="hidden">Me</p>
+          </a>
+          <a href="#stack" ref={l => (this.sidebarLinks[2] = l)}>
             <span className="material-icons">code</span>
             <p className="hidden">Stack</p>
           </a>
-          <a href="/#projects" ref={l => (this.sidebarLinks[2] = l)}>
+          <a href="/#projects" ref={l => (this.sidebarLinks[3] = l)}>
             <span className="material-icons">whatshot</span>
             <p className="hidden">Projects</p>
           </a>
-          <a href="/#resume" ref={l => (this.sidebarLinks[3] = l)}>
+          <a href="/#resume" ref={l => (this.sidebarLinks[4] = l)}>
             <span className="material-icons">assignment_ind</span>
             <p className="hidden">Resume</p>
           </a>

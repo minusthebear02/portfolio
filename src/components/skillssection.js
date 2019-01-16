@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Skill from '../components/skill'
+import FloatingIcon from './floatingicon'
 import { skills } from '../utilities/constants'
 import { SectionTitle } from './globalStyle'
 
@@ -14,7 +14,7 @@ export default class SkillsSection extends Component {
         </SectionTitle>
         <Skills>
           {skills.map(skill => (
-            <Skill
+            <FloatingIcon
               key={skill.id}
               name={skill.name}
               logo={skill.logo}
@@ -31,11 +31,10 @@ const SkillsWrapper = styled.div`
   position: relative;
   z-index: 4;
   background-color: white;
-  box-shadow: inset 0px 9px 50px -15px #333;
+  box-shadow: inset 0 22px 22px -15px rgba(0, 0, 0, 0.3);
 `
 
 const Skills = styled.div`
-  background-color: #fff;
   padding: 0 100px 100px;
   display: flex;
   flex-wrap: wrap;

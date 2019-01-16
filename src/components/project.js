@@ -63,9 +63,7 @@ const ProjectWrapper = styled.div`
   -webkit-transform: skewY(10deg);
   transform: skewY(10deg);
   color: #444;
-  box-shadow: inset 0px 9px 50px -15px #333;
-
-
+  box-shadow: inset 0 22px 22px -15px rgba(0, 0, 0, 0.3);
 }
 
   &:nth-child(odd) {
