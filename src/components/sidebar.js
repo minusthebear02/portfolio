@@ -62,15 +62,15 @@ const SidebarWrapper = styled.div`
   position: sticky;
   top: 0;
   background: transparent;
-  height: 100vh;
-  width: 200px;
-  padding: 25px 20px 50px;
+  width: 75px;
+  padding: 25px 0 0 20px;
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   transition: all 0.4s ease-in-out;
+  margin-bottom: -285px;
 
   .name {
     display: none;
@@ -108,6 +108,7 @@ const SidebarWrapper = styled.div`
           opacity: 1;
           font-size: inherit;
           margin-left: 20px;
+          display: block;
         }
       }
     }
@@ -136,6 +137,7 @@ const SidebarWrapper = styled.div`
       &:hover {
         .hidden {
           opacity: 0.8;
+          display: block;
         }
       }
     }
@@ -194,11 +196,22 @@ const SidebarWrapper = styled.div`
   }
 
   .hidden {
+    position: absolute;
+    left: 70px;
     font-family: 'Montserrat';
     font-size: 20px;
     opacity: 0;
     margin-bottom: 0;
     margin-left: 5px;
-    transition: all 0.4s ease-in-out;
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    height: 100vh;
+    margin-bottom: -100vh;
+
+    .hidden {
+      position: initial;
+    }
   }
 `

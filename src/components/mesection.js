@@ -35,7 +35,6 @@ export default class Me extends Component {
 const MeSectionWrapper = styled.div`
   position: relative;
   background-color: rgb(115, 180, 237);
-  margin-top: -100vh;
   z-index: 4;
   padding: 0 10% 100px;
   box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.3);

@@ -74,10 +74,10 @@ export default class IntroSection extends Component {
 
 const HeroImageWrapper = styled.div`
   position: fixed;
-  height: 100vh;
-  width: 100vw;
   z-index: 3;
   top: 0;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 
   .hero-image {
@@ -86,8 +86,10 @@ const HeroImageWrapper = styled.div`
     width: 100vw;
   }
 
-  @media screen and (max-width: 750px) {
-    height: 110vh;
+  @media (max-width: 750px) {
+    .hero-image {
+      height: 700px;
+    }
   }
 `
 
@@ -121,7 +123,7 @@ const InfoSection = styled.div`
 
   @media screen and (max-width: 750px) {
     .name {
-      height: 100vh;
+      height: 700px;
 
       h2 {
         margin-top: -50px;
