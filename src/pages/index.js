@@ -7,7 +7,7 @@ import NameSection from '../components/namesection'
 import SkillsSection from '../components/skillssection'
 import ProjectsSection from '../components/projectssection'
 import ResumeSection from '../components/resumesection'
-import ContactSection from '../components/ContactSection'
+import ContactSection from '../components/contactsection'
 import Sidebar from '../components/sidebar'
 
 export default class IndexPage extends Component {
