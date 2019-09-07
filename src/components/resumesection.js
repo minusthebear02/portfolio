@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import resumeImg from '../images/resume/Mark-Froehlich-Resume---Dec-2018.jpg'
+import resumeImg from '../images/resume/Mark-Froehlich-Resume-8:19.jpg'
+import resumePdf from '../images/resume/Mark-Froehlich-Resume-8:19.pdf'
 import { SectionTitle } from './globalStyle'
 
 export default class ResumeSection extends Component {
@@ -10,7 +11,7 @@ export default class ResumeSection extends Component {
       <>
         <ResumeWrapper>
           <SectionTitle id="resume">resume</SectionTitle>
-          <a href={resumeImg}>
+          <a href={resumePdf}>
             <img src={resumeImg} alt="Mark Froehlich's super awesome resume" />
           </a>
         </ResumeWrapper>

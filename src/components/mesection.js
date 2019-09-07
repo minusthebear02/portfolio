@@ -18,7 +18,8 @@ export default class Me extends Component {
             I work as a Web Developer for AMAC Inc working on their 10+ (mostly)
             WordPress sites trying to push forward the tech with some new
             JavaScript tools and frameworks like ES6 and React. I also work on
-            personal side projects and professional pages an apps when possible.
+            personal side projects and professional pages and apps when
+            possible.
           </p>
           <p>
             In my free time I like to spend time out on the golf course or
