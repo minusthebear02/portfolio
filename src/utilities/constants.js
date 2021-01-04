@@ -7,6 +7,19 @@ import sassLogo from '../images/skills/sass-logo-white.png'
 
 export const projects = [
   {
+    name: 'AMAC Map',
+    description:
+      'A business listing directory application for AMAC Members to search for and patronize local businesses with similar values and ideologies that provide discounts for them as AMAC Members. This Full Stack React and Node application is live and in production!<br /><br /><a href="https://map.amac.us/" target="_blank">Check it out here.</a>',
+    features: [
+      'Map for searching nearby locations based on zip code, location provided by the browser, business category and/or business name',
+      'Users have the choice to display results based on distance from searched location or by business name alphabetically',
+      'Businesses that get listed can upload their logo along with optional discount coupons',
+      'Businesses can have any number of locations. If location count is high, locations close together get grouped on the map for render performance purposes',
+    ],
+    stack: ['React', 'Framer Motion', 'Node', 'Express', 'Stripe'],
+    images: ['map-home.png', 'map-map.png'],
+  },
+  {
     name: 'kovi',
     description:
       "A mobile CRM / Directory app used for rental community vendors to locate and contact rental communities in their city and track their sales process with notes, favorites, and contact tracking.<br /><br />I've been the sole developer and designer on this project and the first beta version is now being tested via Test Flight on iOS.",

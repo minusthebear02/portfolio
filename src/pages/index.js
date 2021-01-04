@@ -12,7 +12,7 @@ import Sidebar from '../components/sidebar'
 
 export default class IndexPage extends Component {
   handleScroll = () => {
-    let projectsBottom = this.resume.getBoundingClientRect().top - 130
+    let projectsBottom = this.resume.getBoundingClientRect().top
 
     this.sidebar.sidebarLinks.forEach(link => {
       if (link.getBoundingClientRect().bottom > projectsBottom) {
