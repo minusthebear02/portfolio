@@ -21,9 +21,22 @@ export const projects = [
     images: [{fileName: 'amac-news-app.png', altText: 'AMAC App'}],
   },
   {
+    name: 'Army Futures Command',
+    description:
+      "A public facing website that shows the US Army's Army Futures Command organization and all of its sub-commands.<br /><br />The site's purpose is to invite collaboration between AFC and potential industry and academic partners to help further modernize the Army's efforts.<br /><br /><a href='https://armyfuturescommand.com' target='_blank' rel='noopener noreferrer'>Check it out here.</a>",
+    features: [
+      'Detailed descriptions of what the Army Futures Command does',
+      'Interactive map showing locations of sub-commands all over the world',
+      'Each subcommand has its own page detailing what they do with portraits and bios of their leadership',
+      'Lists of opportunities to get involved with the program including career opportunities along with projects open to proposal submissions',
+    ],
+    stack: ['React', 'Next.js', 'Strapi', 'TinaCMS'],
+    images: [{ fileName: 'army-futures-command-home.png', altText: 'Army Futures Command Homepage' }, { fileName: 'army_futures_command-sf.png', altText: 'Army Futures Command Software Factory page'}],
+  },
+  {
     name: 'AMAC Map',
     description:
-      'A business listing directory application for AMAC Members to search for and patronize local businesses with similar values and ideologies that provide discounts for them as AMAC Members. This Full Stack React and Node application is live and in production!<br /><br /><a href="https://map.amac.us/" target="_blank">Check it out here.</a>',
+      'A business listing directory application for AMAC Members to search for and patronize local businesses with similar values and ideologies that provide discounts for them as AMAC Members. This Full Stack React and Node application is live and in production!<br /><br /><a href="https://map.amac.us/" target="_blank" rel="noopener noreferrer">Check it out here.</a>',
     features: [
       'Map for searching nearby locations based on zip code, location provided by the browser, business category and/or business name',
       'Users have the choice to display results based on distance from searched location or by business name alphabetically',
@@ -34,22 +47,9 @@ export const projects = [
     images: [{fileName: 'map-home.png', altText: 'AMAC Map - Homepage'}, {fileName: 'map-map.png', altText: 'AMAC Map - Map page'}],
   },
   {
-    name: 'kovi',
-    description:
-      "A mobile CRM / Directory app used for rental community vendors to locate and contact rental communities in their city and track their sales process with notes, favorites, and contact tracking.<br /><br />I've been the sole developer and designer on this project and the first beta version is now being tested via Test Flight on iOS.",
-    features: [
-      'Map with apartment communities marked and scroll cards for quick contact info',
-      'Community pages with full info including unit counts, contact info, management company info and manager names',
-      'Note taking ability and community favoriting for each user to save with each community',
-      'Saved contact events to track calls, emails and visits (based on GPS check-ins)',
-    ],
-    stack: ['React Native', 'GraphQL', 'Apollo', 'Expo'],
-    images: [{ fileName: 'kovi-map.png', altText: 'Kovi Map' }],
-  },
-  {
     name: 'AMAC games',
     description:
-      'Five puzzle type games for our 1.5 million over 55 aged members to play to keep their minds sharp. Built as Custom Post Types in Wordpress for in-house content creators to quickly and easily input each new daily game into the WP backend and have the games created dynamically.<br /><br />Each game with custom PHP templates along with Javascript and jQuery scripts to implement game creation and gameplay.<br /><br /><a href="https://amac.us/games" target="_blank">Check them out here.</a>',
+      'Five puzzle type games for our 1.5 million over 55 aged members to play to keep their minds sharp. Built as Custom Post Types in Wordpress for in-house content creators to quickly and easily input each new daily game into the WP backend and have the games created dynamically.<br /><br />Each game with custom PHP templates along with Javascript and jQuery scripts to implement game creation and gameplay.<br /><br /><a href="https://amac.us/games" target="_blank" rel="noopener noreferrer">Check them out here.</a>',
     features: [
       'Quizzes',
       'Puzzle',
