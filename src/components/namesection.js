@@ -57,7 +57,7 @@ export default class IntroSection extends Component {
                           Froehlich
                         </h2>
                         <div className="title">
-                          <h4>Web Developer</h4>
+                          <h4>Software Developer</h4>
                         </div>
                       </div>
                     </InfoSection>
@@ -117,7 +117,7 @@ const InfoSection = styled.div`
   h4 {
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
-    font-size: 36px;
+    font-size: 32px;
     margin-top: 10px;
   }
 
