@@ -30,7 +30,7 @@ export const projects = [
       'Each subcommand has its own page detailing what they do with portraits and bios of their leadership',
       'Lists of opportunities to get involved with the program including career opportunities along with projects open to proposal submissions',
     ],
-    stack: ['React', 'Next.js', 'Strapi', 'Graphql', 'TinaCMS'],
+    stack: ['React', 'Next.js', 'Strapi', 'GraphQL', 'TinaCMS'],
     images: [{ fileName: 'army-futures-command-home.png', altText: 'Army Futures Command Homepage' }, { fileName: 'army_futures_command-sf.png', altText: 'Army Futures Command Software Factory page'}],
   },
   {
