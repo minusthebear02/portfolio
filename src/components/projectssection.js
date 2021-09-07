@@ -14,8 +14,8 @@ const PROJECT_IMAGES = graphql`
           relativePath
           name
           childImageSharp {
-            sizes(maxWidth: 750) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 750) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -23,7 +23,6 @@ const PROJECT_IMAGES = graphql`
     }
   }
 `
-
 export default class ProjectsSection extends Component {
   render() {
     return (
@@ -31,23 +30,22 @@ export default class ProjectsSection extends Component {
         <SectionTitle style={{ marginBottom: 150 }}>projects</SectionTitle>
         <StaticQuery
           query={PROJECT_IMAGES}
-          render={data =>
-            projects.map(project => {
-              const images = data.Images.edges.filter(({ node }) => {
-                return node.relativePath.includes(project.name)
-              })
+          render={data => {
+
+            console.log('data: ', data)
+
+            return projects.map(project => {
+              const images = data.Images.edges.filter(({ node }) => node.relativePath.includes(project.name))
 
               return (
                 <Project
-                  name={project.name}
-                  description={project.description}
-                  images={images}
-                  features={project.features}
-                  stack={project.stack}
-                  key={project.name}
+                key={project.name}
+                project={project}
+                images={images}
                 />
-              )
-            })
+                )
+              })
+            }
           }
         />
       </ProjectsSectionWrapper>

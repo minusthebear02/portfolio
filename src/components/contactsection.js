@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import linkedIn from '../images/linkedin-logo.svg'
 import { SectionTitle } from './globalStyle'
-import FloatingIcon from './floatingicon'
 
 export default class ContactSection extends Component {
   render() {
@@ -19,7 +18,7 @@ export default class ContactSection extends Component {
             href="https://www.linkedin.com/in/mark-froehlich/"
             target="_blank"
           >
-            <img src={linkedIn} />
+            <img src={linkedIn} alt="LinkedIn Link" />
             <p>/in/mark-froehlich</p>
           </Social>
         </div>

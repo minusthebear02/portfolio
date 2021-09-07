@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Mark Froehlich | Web Dev',
     description:
-      'Mark Froehlich is a web developer that loves React and all things JavaScript! ',
+      "Mark Froehlich is a Software Developer (frontend focused) who is really good at figuring out how to solve problems with code.",
     author: 'mfroeh2@gmail.com',
   },
   plugins: [

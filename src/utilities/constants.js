@@ -7,6 +7,20 @@ import sassLogo from '../images/skills/sass-logo-white.png'
 
 export const projects = [
   {
+    name: 'AMAC App',
+    description:
+      "AMAC's flagship mobile application with over 37,000 downloads across the iOS App Store and Google Play Store with 4.8 star ratings in both. News application where users read new and archived news articles or podcasts and bookmark the ones they want to come back to later. Features video along with podcast style audio that plays even while app is not open or phone is asleep. (POLITICAL VIEWS OF AMAC DO NOT REFLECT MY OWN)<br /><br /><a href='https://apps.apple.com/us/app/amac-inc/id1556320046'><img width='75px' src='https://amac.us/wp-content/uploads/2021/04/app-store-icon.png' alt='Apple App Store Icon'></a> <a href='https://play.google.com/store/apps/details?id=com.amac.amac'><img width='61px' style='margin-left:15px' src='https://amac.us/wp-content/uploads/2021/04/google-play-icon.png' alt='Google Play Store Icon'></a>",
+    features: [
+      'Easy to use News reading and bookmarking',
+      'User engagement in the form of article comments and polls',
+      'Video podcasts with audio that persists even while the phone screen is asleep',
+      'Full fledged push notification system implemented with the help of serverless functions on AWS',
+      'Dark mode and Text size adjustments to help make the app more accessible',
+    ],
+    stack: ['React Native', 'Wordpress REST API', 'AWS Lambda', 'Node.js'],
+    images: [{fileName: 'amac-news-app.png', altText: 'AMAC App'}],
+  },
+  {
     name: 'AMAC Map',
     description:
       'A business listing directory application for AMAC Members to search for and patronize local businesses with similar values and ideologies that provide discounts for them as AMAC Members. This Full Stack React and Node application is live and in production!<br /><br /><a href="https://map.amac.us/" target="_blank">Check it out here.</a>',
@@ -17,7 +31,7 @@ export const projects = [
       'Businesses can have any number of locations. If location count is high, locations close together get grouped on the map for render performance purposes',
     ],
     stack: ['React', 'Framer Motion', 'Node', 'Express', 'Stripe'],
-    images: ['map-home.png', 'map-map.png'],
+    images: [{fileName: 'map-home.png', altText: 'AMAC Map - Homepage'}, {fileName: 'map-map.png', altText: 'AMAC Map - Map page'}],
   },
   {
     name: 'kovi',
@@ -30,7 +44,7 @@ export const projects = [
       'Saved contact events to track calls, emails and visits (based on GPS check-ins)',
     ],
     stack: ['React Native', 'GraphQL', 'Apollo', 'Expo'],
-    images: ['kovi-map.png'],
+    images: [{ fileName: 'kovi-map.png', altText: 'Kovi Map' }],
   },
   {
     name: 'AMAC games',
@@ -44,19 +58,8 @@ export const projects = [
       'Word Jumble',
     ],
     stack: ['Wordpress', 'PHP', 'Javascript', 'jQuery'],
-  },
-  {
-    name: 'SiteStash',
-    description:
-      "A Bookmarking website that allows users to create their own topics and index websites in the appropriate topic for later use. Users can then update and delete bookmarks and topics at will as their interests change.<br /><br />For times when a user doesn't have access to their SiteStash account but discover a site they'd like to bookmark, they can email the site with the topic name and bookmarked website. Their site will then automatically be saved to the appropriate location in the database.",
-    features: [
-      'Dynamically pulling in bookmarked sites icons to display with the names',
-      'Users can not only bookmark websites on the application but they can email a URL to SiteStash and have it saved in the SiteStash database',
-      'Full user authorization and authentication with Devise and Pundit',
-      'Users can group bookmarked websites into their custom created topics for easier location',
-    ],
-    stack: ['Ruby on Rails', 'Devise', 'Pundit', 'Faker'],
-  },
+    images: [{ fileName: 'amac-games.jpg', alText: 'AMAC Games - Archive page'}, { fileName: 'amac-word-search.jpg', altText: 'AMAC Games - Word Search'}]
+  }
 ]
 
 export const skills = [

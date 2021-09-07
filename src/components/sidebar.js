@@ -27,7 +27,7 @@ export default class Sidebar extends Component {
           className="menu-group burger"
           ref={l => (this.sidebarLinks[0] = l)}
         >
-          <a href="#" onClick={this.toggleMenu} className={open}>
+          <a href="/#" onClick={this.toggleMenu} className={open}>
             <span className="material-icons">remove</span>
             <span className="material-icons">remove</span>
             <span className="material-icons">remove</span>
@@ -35,11 +35,12 @@ export default class Sidebar extends Component {
         </div>
         <h3 className="name">Mark Froehlich</h3>
         <div className="menu-group sections-nav">
-          <a href="#me" ref={l => (this.sidebarLinks[1] = l)}>
+          <a href="/#me" ref={l => (this.sidebarLinks[1] = l)}>
             <span className="material-icons">face</span>
             <p className="hidden">Me</p>
           </a>
-          <a href="#stack" ref={l => (this.sidebarLinks[2] = l)}>
+          <a href="/
+          #stack" ref={l => ( this.sidebarLinks[2] = l )}>
             <span className="material-icons">code</span>
             <p className="hidden">Stack</p>
           </a>
@@ -87,7 +88,8 @@ const SidebarWrapper = styled.div`
   /* Open Menu */
   &.open {
     width: 250px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(20px);
 
     .name {
       display: block;

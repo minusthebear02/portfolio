@@ -1,27 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Tilt from 'react-vanilla-tilt'
 
-export default class Project extends Component {
-  render() {
-    const { name, images, description, stack, features } = this.props
+const Project = ( { images, project } ) => {
+
+  console.log('images: ', images)
+    const { name, description, stack, features } = project
 
     return (
       <ProjectWrapper>
         <h2 className="project-name">{name}</h2>
         <div className="project-content">
           <div className="project-image">
-            {images.map(image => {
-              const mainImageSize = image.node.childImageSharp.sizes
+            {!!images.length && images.map(image => {
+              const mainImageFluid = image.node.childImageSharp.fluid
               const mainImageName = image.node.name
+              const altText = project.images?.find(img => img.fileName?.includes(mainImageName))?.altText || ''
+
               return (
                 <div className={`${name}-image`} key={mainImageName}>
                   <Tilt options={{ glare: true }}>
                     <Img
                       title={mainImageName}
-                      alt={mainImageName}
-                      sizes={mainImageSize}
+                      alt={altText}
+                      fluid={mainImageFluid}
                     />
                   </Tilt>
                 </div>
@@ -36,7 +39,7 @@ export default class Project extends Component {
             <h4>Features</h4>
             <hr />
             <ul>
-              {features.map(feature => (
+              {!!features.length && features.map(feature => (
                 <li key={feature.substring(feature.length, -10)}>{feature}</li>
               ))}
             </ul>
@@ -51,8 +54,9 @@ export default class Project extends Component {
         </div>
       </ProjectWrapper>
     )
-  }
 }
+
+export default Project;
 
 const ProjectWrapper = styled.div`
   background-color: coral;

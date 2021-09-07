@@ -9,17 +9,13 @@ export default class Me extends Component {
         <SectionTitle>me</SectionTitle>
         <div class="description">
           <p>
-            I'm a Web Developer who likes building websites and web apps for
-            people to enjoy using. I like to craft tools that make people's
-            lives better, whether in big ways or small, professional or
+            I'm a Software Developer who likes building websites and web apps that delight their users.
+            I like to craft tools that make people's
+            lives better, whether in big ways or small; professional or
             personal.
           </p>
           <p>
-            I work as a Web Developer for AMAC Inc working on their 10+ (mostly)
-            WordPress sites trying to push forward the tech with some new
-            JavaScript tools and frameworks like ES6 and React. I also work on
-            personal side projects and professional pages and apps when
-            possible.
+            I tend to prefer working on the frontend using awesome tools and libraries like React/React Native or Ruby on Rails but I've got a ton of experience learning new (or old) things necessary to get a job done. From setting up serverless functions with node.js in AWS to creating custom Wordpress themes from scratch, whatever the problem is I can figure out a solution.
           </p>
           <p>
             In my free time I like to spend time out on the golf course or
