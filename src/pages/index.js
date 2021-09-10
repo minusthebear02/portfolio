@@ -34,7 +34,7 @@ export default class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <SEO keywords={['gatsby', 'application', 'react']} title="" />
+        <SEO keywords={['gatsby', 'application', 'react']} title="Mark Froehlich | Software Dev" />
         <NameSection />
         <Sidebar ref={s => (this.sidebar = s)} />
         <MeSection />

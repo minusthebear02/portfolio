@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Mark Froehlich | Web Dev',
+    title: 'Mark Froehlich | Software Dev',
     description:
       "Mark Froehlich is a Software Developer (frontend focused) who is really good at figuring out how to solve problems with code.",
     author: 'mfroeh2@gmail.com',
