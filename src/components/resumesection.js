@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import resumeImg from '../images/resume/Mark_Froehlich_Resume-9_21.jpg'
-import resumePdf from '../images/resume/Mark_Froehlichs_Resume-9:21.pdf'
+import resumeImg from '../images/resume/Feb-23-Resume.jpg'
+import resumePdf from '../images/resume/Feb-23-Resume.pdf'
 import { SectionTitle } from './globalStyle'
 
 export default class ResumeSection extends Component {
